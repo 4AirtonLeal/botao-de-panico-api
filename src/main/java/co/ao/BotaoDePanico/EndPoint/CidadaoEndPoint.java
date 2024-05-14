@@ -64,7 +64,7 @@ public class CidadaoEndPoint {
         return new ResponseEntity<>(cidadaoDAO.save(cidadao), HttpStatus.OK);
     }
 
-    @PostMapping(path = "cidadao")
+    @PostMapping(path = "/cidadao")
     @ApiOperation(value = "Permite salvar um (1) novo cidadão na base de dados", response = TbCidadao[].class)
     public ResponseEntity<?> save(@Valid @RequestBody TbCidadao cidadao) {
         return new ResponseEntity<>(cidadaoDAO.save(cidadao), HttpStatus.CREATED);
